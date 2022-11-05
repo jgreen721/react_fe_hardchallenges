@@ -1,0 +1,143 @@
+.job-content-parent {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.jobinfo-header-row {
+  display: flex;
+  /* border: 1px solid red; */
+  transform: translateY(-2em);
+  background: var(--mainbg);
+  margin: 1rem 0;
+  background: var(--secondbg);
+  border-radius: 0.25em;
+}
+
+.jobinfo-logo-col {
+  padding: 2em;
+  /* border: 2px solid red; */
+}
+
+.jobinfo-large-header-col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.jobinfo-company,
+.jobinfo-site {
+  margin: 0.5em;
+}
+
+.companysite-btn {
+  background: var(--mainbg);
+  padding: 0.85em;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  color: var(--secondtext);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.jobinfo-body {
+  padding: 1em;
+  background: var(--secondbg);
+  border-radius: 0.25em;
+}
+
+.jobinfo-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-row {
+  display: flex;
+}
+
+.jobinfo-site {
+  font-weight: 300;
+}
+
+.apply-btn {
+  background: var(--secondtext);
+  color: var(--mainbg);
+  padding: 0.75em;
+  border-radius: 0.25em;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.apply-btn:hover {
+  opacity: 75%;
+}
+
+.jobbody-title {
+  margin: 0.5em 0;
+}
+
+.location-h5 {
+  color: var(--themeblue);
+  font-weight: 600;
+  transform: translateY(-0.5em) translateX(0.5em);
+}
+
+.blurb-p {
+  margin: 0.5em;
+  opacity: 65%;
+  font-weight: 600;
+}
+
+.requirement-item,
+.responsibility-item {
+  margin: 0.5em;
+}
+
+.requirement-item {
+  list-style: initial;
+}
+
+.job-header-title {
+  margin: 1em 0;
+  font-size: 1.25rem;
+}
+
+.bold {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.bottom-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0;
+  background: var(--secondbg);
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .jobinfo-large-header-col {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1em;
+  }
+
+  .companysite-btn {
+    margin: 0;
+    margin: 0.5rem;
+  }
+
+  .jobinfo-company,
+  .jobinfo-site {
+    margin: 0;
+  }
+
+  .jobbody-title {
+    font-size: 1rem;
+  }
+}

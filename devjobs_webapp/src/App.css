@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  /* height: 100vh; */
+  /* width: 100vw; */
+  max-width: 1450px;
+  margin: 0 auto;
+  animation: fadein 2s forwards;
+  overflow-x: hidden;
+  /* border: 2px solid red; */
+}
+
+/* :root {
+  --lightmainbg: whitesmoke;
+  --lighttext: black;
+  --darktext: white;
+  --darkmainbg: rgb(17, 38, 133);
+  --darkcardbg: rgb(43, 72, 201);
+  --mainfont: "Roboto", sans-serif;
+} */
+
+.app[data-theme="light"] {
+  --mainbg: whitesmoke;
+  --secondbg: white;
+  --maintext: black;
+  --secondtext: #5964e0;
+  --cardbg: rgb(227, 231, 248);
+  --togglecolor: rgb(43, 72, 201);
+  --themeblue: #5964e0;
+
+  --mainfont: "Roboto", sans-serif;
+}
+
+.app[data-theme="dark"] {
+  --maintext: black;
+  --secondtext: white;
+  --mainbg: rgb(17, 38, 133);
+  --secondbg: rgb(47, 58, 133);
+  --cardbg: rgb(43, 72, 201);
+  --mainfont: "Roboto", sans-serif;
+  --themeblue: #5964e0;
+}
+
+body {
+  background: rgb(17, 38, 133);
+}
+
+.app {
+  font-family: var(--mainfont);
+  background: var(--mainbg);
+  color: var(--maintext);
+}
+
+.app-content-parent {
+  width: 90%;
+  /* border: 3px solid purple; */
+  margin: 0 auto;
+  /* height: 70vh; */
+}
+
+.jobs-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  /* height: 80%; */
+  /* overflow: auto; */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* @media screen and (max-width: 1050px) {
+  .app {
+    overflow-x: hidden;
+  }
+} */
+
+@media screen and (max-width: 650px) {
+  .app-content-parent {
+    width: 95%;
+  }
+
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* .desktop-only {
+    display: none;
+  } */
+}
+
+@media screen and (max-width: 450px) {
+  .jobs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(-225vh);
+    filter: blur(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+
+    filter: blur(0px);
+  }
+}
