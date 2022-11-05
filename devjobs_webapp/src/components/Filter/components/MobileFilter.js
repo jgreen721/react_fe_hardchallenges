@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
-const MobileFilter = ({ counter, toggleFilterOptions }) => {
-  const [title, setTitle] = useState("");
-  const [location, setLocation] = useState("");
-  const [fullTime, setFullTime] = useState(false);
-
+const MobileFilter = ({
+  title,
+  setTitle,
+  location,
+  setLocation,
+  fullTime,
+  setFullTime,
+  counter,
+  toggleFilterOptions,
+}) => {
   switch (counter) {
     case 1:
       return (
