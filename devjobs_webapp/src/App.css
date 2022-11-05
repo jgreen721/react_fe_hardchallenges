@@ -86,6 +86,22 @@ li {
   }
 } */
 
+.load-btn-div {
+  width: 100%;
+  text-align: center;
+}
+
+.load-btn {
+  background: var(--secondtext);
+  padding: 0.25em;
+  margin: 1em;
+  color: var(--secondbg);
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
 @media screen and (max-width: 650px) {
   .app-content-parent {
     width: 95%;

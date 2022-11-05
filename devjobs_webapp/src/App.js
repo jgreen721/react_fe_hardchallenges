@@ -7,6 +7,7 @@ function App() {
   const [jobs, setJobs] = useState([]);
   const [hasFiltered, setHasFiltered] = useState(false);
   const [currJob, setCurrJob] = useState({});
+  const [isBatchOne, setIsBatchOne] = useState(true);
   const jobsRef = useRef();
   useEffect(() => {
     fetchJobs();
@@ -84,9 +85,25 @@ function App() {
             filterJobs={filterJobs}
           />
           <div className="jobs-container">
-            {jobs.map((j) => (
-              <JobCard selectJob={selectJob} job={j} key={j.id} />
-            ))}
+            {isBatchOne
+              ? jobs
+                  .slice(0, 9)
+                  .map((j) => (
+                    <JobCard selectJob={selectJob} job={j} key={j.id} />
+                  ))
+              : jobs
+                  .slice(9, jobs.length - 1)
+                  .map((j) => (
+                    <JobCard selectJob={selectJob} job={j} key={j.id} />
+                  ))}
+          </div>
+          <div className="load-btn-div">
+            <button
+              className="load-btn"
+              onClick={() => setIsBatchOne(!isBatchOne)}
+            >
+              {isBatchOne ? "Load More" : "Previous"}
+            </button>
           </div>
         </div>
       )}
